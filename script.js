@@ -52,7 +52,7 @@ function updateProductList() {
                 Litragem: ${product.liters}L <br>
                 Consumo: ${product.consumption}kWh <br><br>
                 <span class="ratio">Efic. Energ.: <b>${product.ratio.toFixed(2)} Litros/kWh</b></span>
-                <span class="ratio">Efic. Financ.: <b>${product.ratio.toFixed(2)} R$/Efc. Energ.</b></span>
+             <br>   <span class="ratio">Efic. Financ.: <b>${product.efficiencyCost.toFixed(2)} R$/Efc. Energ.</b></span>
             </div>
             <div class="product-actions">
                 <button onclick="editProduct(${index})">Editar</button>
