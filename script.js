@@ -29,7 +29,8 @@ form.addEventListener('submit', (event) => {
     
     if (productName && !isNaN(price) && !isNaN(liters) && !isNaN(consumption)) {
         const ratio = liters / consumption;
-        const product = { productName, price, liters, consumption, ratio };
+        const efficiencyCost = price / ratio;
+        const product = { productName, price, liters, consumption, ratio, efficiencyCost };
         products.push(product);
         updateProductList();
         form.reset();
@@ -50,7 +51,8 @@ function updateProductList() {
                 Preço: R$${product.price.toFixed(2)} <br>
                 Litragem: ${product.liters}L <br>
                 Consumo: ${product.consumption}kWh <br><br>
-                <span class="ratio">Eficiência: <b>${product.ratio.toFixed(2)} Litros/kWh</b></span>
+                <span class="ratio">Efic. Energ.: <b>${product.ratio.toFixed(2)} Litros/kWh</b></span>
+                <span class="ratio">Efic. Financ.: <b>${product.ratio.toFixed(2)} R$/Efc. Energ.</b></span>
             </div>
             <div class="product-actions">
                 <button onclick="editProduct(${index})">Editar</button>
