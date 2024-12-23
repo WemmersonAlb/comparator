@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Comparador</h1>
+    </div>
+    <button id="addButton">+</button>
+    <div id="formContainer" class="form-container">
+        <form id="productForm">
+            <div class="input-field">
+                <label for="productName">Nome do produto</label>
+                <input type="text" id="productName" placeholder="Nome do produto" required>
+            </div>
+            <div class="input-field">
+                <label for="productPrice">Preço</label>
+                <input type="number" id="productPrice" placeholder="Preço" required>
+            </div>
+            <div class="input-field">
+                <label for="productVolume">Litragem total</label>
+                <input type="number" id="productVolume" placeholder="Litragem total" required>
+            </div>
+            <div class="input-field">
+                <label for="productConsumption">Consumo em KwH</label>
+                <input type="number" id="productConsumption" placeholder="Consumo em KwH" required>
+            </div>
+            <div class="input-button">
+                <button type="submit">Adicionar</button>
+                <button type="button" id="cancelButton">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <div id="comparisonList" class="comparison-list"></div>
+</body>
+</html>

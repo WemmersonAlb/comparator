@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0e0e0; /* Tom não tão branco */
+}
+
+.navbar {
+    width: 100%;
+    background-color: #003366;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar h1 {
+    color: white;
+    margin: 0;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px; /* Aumentando o height */
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #002244;
+}
+
+.form-container {
+    display: none;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Margin para não encostar nas laterais */
+}
+
+#product-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-field {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.comparison-list {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.comparison-item {
+    background-color: #003366;
+    border: 1px solid #002244;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-details {
+    text-align: left;
+    width: 100%;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.comparison-item button {
+    background-color: white;
+    color: #003366;
+    border: 1px solid #003366;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.comparison-item button:hover {
+    background-color: #003366;
+    color: white;
+}
+
+.comparison-item .ratio {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 90%;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    .comparison-list {
+        width: 90%;
+    }
+}
