@@ -105,3 +105,22 @@ function editProduct(index) {
     products.splice(index, 1);
     updateProductList();
 }
+document.addEventListener('DOMContentLoaded', (event) => {
+    const modal = document.getElementById('instructionModal');
+    const closeButton = document.querySelector('.close-button');
+    const understoodButton = document.getElementById('understoodButton');
+
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    understoodButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
